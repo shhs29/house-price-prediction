@@ -11,8 +11,8 @@ from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 
-house_data = pd.read_csv("train.csv").drop("Id", axis=1)
-test_data = pd.read_csv("test.csv").drop("Id", axis=1)
+house_data = pd.read_csv("inputs/train/train.csv").drop("Id", axis=1)
+test_data = pd.read_csv("inputs/test/test.csv").drop("Id", axis=1)
 cols_with_missing = [col for col in house_data.columns if house_data[col].isnull().any()]
 house_data = house_data.drop(cols_with_missing, axis=1)
 
